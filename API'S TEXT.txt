@@ -1,0 +1,8 @@
+
+Link da API: https://ctd-todo-api.herokuapp.com/#/
+
+TODOs API
+[ URL base: https://ctd-todo-api.herokuapp.com /v1 ]
+
+Link do Postman para ver cada Operação usada
+https://documenter.getpostman.com/view/20400580/UVyxQu2Y

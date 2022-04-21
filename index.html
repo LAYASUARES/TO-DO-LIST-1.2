@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300&family=Nunito:ital,wght@1,700&family=Red+Hat+Mono&display=swap"
+          rel="stylesheet">
+     <link rel="stylesheet" href="./CSS/form.css">
+     <title>Formulário de login</title>
+</head>
+
+<body>
+
+     <div class="titulo-esquerda">
+          <h1><span class="dh">DH</span> TO DO List</h1>
+     </div>
+
+     <div class="conteudo-direita">
+          <form>
+               <div class="titulo-central">
+                    <p>TO DO List</p>
+               </div>
+               <h2>Acessar</h2>
+
+               <label for="inputEmail">E-mail</label>
+               <input type="email" name="email" id="inputEmail" required>
+               <span class="loginInput-border"></span>
+
+               <label for="inputPassword">Senha</label>
+               <input type="password" name="password" id="inputPassword" required>
+               <span class="loginInput-border"></span>
+
+               <button type="submit" class="botao-submit">Entrar</button>
+          </form>
+
+          <a href="signup.html" class="cadastro">Não possui conta? Crie agora mesmo</a>
+     </div>
+
+     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     <script src="./JS/login.js"></script>
+</body>
+
+</html>

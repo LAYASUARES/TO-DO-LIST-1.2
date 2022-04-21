@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./CSS/form.css">
+  <title>Formulário de Cadastro</title>
+</head>
+
+<body>
+
+  <div class="titulo-esquerda2">
+    <h1><span class="dh">DH</span> TO DO List</h1>
+  </div>
+
+  <div class="conteudo-direita">
+    <form>
+      <div class="titulo-central">
+        <p>TO DO List</p>
+      </div>
+
+
+      <label for="inputEmail">Nome:</label>
+      <input type="text" name="nome" id="inputNome">
+      <span class="loginInput-border"></span>
+
+      <label for="inputPassword">Apelido:</label>
+      <input type="text" name="apelido" id="inputApelido">
+      <span class="loginInput-border"></span>
+
+      <label for="inputEmail">E-mail:</label>
+      <input type="email" name="email" id="inputEmail">
+      <span class="loginInput-border"></span>
+
+      <label for="inputPassword2">Senha:</label>
+      <input type="password" name="senha1" id="inputPassword2">
+      <span class="loginInput-border"></span>
+
+      <label for="inputPasswordRepeat">Repetir senha:</label>
+      <input type="password" name="senha2" id="inputPasswordRepeat">
+      <span class="loginInput-border"></span>
+
+
+      <button type="submit" class="botao-submit">Criar Conta</button>
+    </form>
+
+    <a href="login.html" class="login">Já possui conta? Acesse aqui</a>
+  </div>
+
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./JS/signup.js"></script>
+</body>
+
+</html>
