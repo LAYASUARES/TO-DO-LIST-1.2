@@ -12,7 +12,7 @@ let refreshReference = document.querySelector(".refresh");
 
 function acessoNaoAutorizado() {
     localStorage.removeItem("jwt")
-    location.href = "index.html"
+    location.replace("index.html")
 }
 
 
