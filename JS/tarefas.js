@@ -23,7 +23,7 @@ let requestConfiguration = {
     }
 }
 
-fetch("https://ctd-todo-api.herokuapp.com/v1/users/getMe", requestConfiguration).then(function (response) {
+fetch("https://ctd-fe2-todo-v2.herokuapp.com/v1/users/getMe", requestConfiguration).then(function (response) {
 
     if (response.ok) {
 
@@ -44,7 +44,7 @@ fetch("https://ctd-todo-api.herokuapp.com/v1/users/getMe", requestConfiguration)
 
 
 function getTasks() {
-    fetch("https://ctd-todo-api.herokuapp.com/v1/tasks", requestConfiguration).then(function (response) {
+    fetch("https://ctd-fe2-todo-v2.herokuapp.com/v1/tasks", requestConfiguration).then(function (response) {
         response.json().then(function (data) {
             //console.log(data)
             renderTasks(data)
@@ -98,7 +98,7 @@ criarTarefaReference.addEventListener("click", function (event) {
 
     }
 
-    fetch("https://ctd-todo-api.herokuapp.com/v1/tasks", requestConfigurationPost).then(function (response) {
+    fetch("https://ctd-fe2-todo-v2.herokuapp.com/v1/tasks", requestConfigurationPost).then(function (response) {
         response.json().then(function (tasks) {
             console.log("Success:", task);
             location.reload()
@@ -130,7 +130,7 @@ let configuracaoalterarStatus = {
 
 function alterarStatus(id) {
 
-    fetch(`https://ctd-todo-api.herokuapp.com/v1/tasks/${id}`, configuracaoalterarStatus).then(function (response) {
+    fetch(`https://ctd-fe2-todo-v2.herokuapp.com/v1/tasks/${id}`, configuracaoalterarStatus).then(function (response) {
         if (response.ok) {
             setTimeout(100)
             getTasks()
@@ -142,7 +142,7 @@ function alterarStatus(id) {
 
 function updateTask(id) {
 
-    fetch(`https://ctd-todo-api.herokuapp.com/v1/tasks/${id}`, configuracaoPutAutorizado).then(function (response) {
+    fetch(`https://ctd-fe2-todo-v2.herokuapp.com/v1/tasks/${id}`, configuracaoPutAutorizado).then(function (response) {
         if (response.ok) {
             setTimeout(100)
             getTasks()
@@ -170,7 +170,7 @@ function deleteTask(id) {
 
     }).then((result) => {
         if (result.isConfirmed) {
-            fetch(`https://ctd-todo-api.herokuapp.com/v1/tasks/${id}`, configuracaoDeleteAutorizado).then(function (response) {
+            fetch(`https://ctd-fe2-todo-v2.herokuapp.com/v1/tasks/${id}`, configuracaoDeleteAutorizado).then(function (response) {
                 if (response.ok) {
                     getTasks()
                     //console.log(response)
@@ -224,7 +224,7 @@ function renderTasks(tasks) {
                 <img onclick="alterarStatus(${task.id})" src="./ASSETS/refresh.png" width="40em" height="40em"/>
                 <img onclick="deleteTask(${task.id})" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAABfUlEQVRoge2YoU4DQRCG/7mro+Wuvjg8JCXhHRC8BAmmtRCqQEIguIoqPMEhEPAKfQECDgvljuLIDYYmFO56O+zS5ch8ZsU/sztf9tYcoCiK4hNyuVl/d3gAxv6sGmY+6p6s7bk605mAyfATXEoYCVye3W8gywYAWi4ONeCBQdubW8tXZYWB0XbzHR4AWgQemBSaCcx3+AlLJkWmAn8W0SPu7wz5twb5TOe4bTxX5W9ABXxTeYGaTfNo9II0fUW0uIC42fiWJckYABBH9dy8qFeC1Q0kyRhZluH5Y9CvGTODmQvzol4JVgLMPLXmZWV5Xiah8m9ABXyjAr5RAd+ogG9UwDcq4BsV8I0K+MZKgIim1rysLM/LJFgJxFEdQUCIonpuRkQgKs6LeiVY/ZWIm43CPwqzMpPcFOkNpNYnlpNIimUCjBtR/U9gvpaUiwQ4C3sAHkUDSfYHPaFGPUmPSKB7unobvIUrIJzD7eeUgvmCQl7vHLbvHO6rKP+ed2yBftABMd1OAAAAAElFTkSuQmCC" />
             </li>
-            </div>`
+        </div>`
         }
     }
 }
