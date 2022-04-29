@@ -100,7 +100,7 @@ const init = function () {
                     title: 'Conta criada com sucesso!'
                })
 
-               fetch("https://ctd-todo-api.herokuapp.com/v1/users", {//Sendo um post significa que precisamos enviar alguma coisa a nossa api
+               fetch("https://ctd-fe2-todo-v2.herokuapp.com/v1/users", {//Sendo um post significa que precisamos enviar alguma coisa a nossa api
                     method: "POST",
                     headers: {
                          "Content-Type": "application/json"
@@ -114,7 +114,6 @@ const init = function () {
                }).then(function (response) {//este é o metodo que usamos para passar uma função de callback que será chamada somente quando a promise do fetch for resolvida com sucesso
                     return response.json();
                }).then(function (data) {
-                    setTimeout(8000)
                     IrPraProximaPagina(data.jwt)
                })
           })
