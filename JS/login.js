@@ -64,7 +64,7 @@ const init = function () {
           botaoSubmit.addEventListener("click", function (event) {
                event.preventDefault();
 
-               fetch("https://ctd-todo-api.herokuapp.com/v1/users/login", {//Sendo um post significa que precisamos enviar alguma coisa a nossa api
+               fetch("https://ctd-fe2-todo-v2.herokuapp.com/v1/users/login", {//Sendo um post significa que precisamos enviar alguma coisa a nossa api
                     method: "POST",
                     headers: {
                          "Content-Type": "application/json"
@@ -90,5 +90,6 @@ const init = function () {
      }
 }
 window.onload = init;
+
 
 
